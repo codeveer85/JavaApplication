@@ -1,0 +1,8 @@
+VSTEST Executable : "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\
+IDE\Extensions\TestPlatform\vstest.console.exe"
+
+MSBuild Executable: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe"
+Nuget executable: "C:\Users\Nikhil\Downloads\Jenkins\nuget.exe"
+"${tool 'MSBuild'}" -verbosity: detailed RestSharpProject.sln /p:Configuration=Release /p:Platform=\"Any CPU"
+"${tool 'VSTest'}" RestSharpAutomation/bin/Release/RestSharpAutomation.dll
+RestSharpProject/bin/Release/RestSharpProject.dll /logger=html /inisolation
